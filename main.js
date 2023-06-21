@@ -3,7 +3,7 @@ var noseY = 0;
 var difference = 0;
 var rightWristX = 0;
 var leftWristX = 0;
-var image="";
+var imagemm="";
 function setup() {
     video = createCapture(VIDEO);
     video.size(550, 500);
@@ -13,7 +13,7 @@ function setup() {
 
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
-    image = loadImage('vangoghoriginalUwU.webp');
+    imagemm = loadImage('vangoghoriginalUwU.webp');
 
 }
 
@@ -36,6 +36,6 @@ function gotPoses(results) {
 function draw() {
     background('#969A97');
     document.getElementById("square_side").innerHTML = "Largura e altura serão = " + difference + "px";
-    image(image, noseX - 200, noseY - 150, difference, difference);
+    image(imagemm, noseX - 200, noseY - 150, difference, difference);
 
 }
